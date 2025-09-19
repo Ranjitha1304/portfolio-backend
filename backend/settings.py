@@ -133,7 +133,7 @@ from decouple import config
 FRONTEND_URLS = config('CORS_ALLOWED_ORIGINS', default='http://localhost:5173').split(',')
 CORS_ALLOWED_ORIGINS = [url.strip() for url in FRONTEND_URLS]
 CORS_ALLOW_CREDENTIALS = True
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Email setup (Gmail SMTP )
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
